@@ -1,5 +1,8 @@
 package com.mcajben.pokemongocalculator;
 
+import android.content.Context;
+import android.view.View;
+
 import java.util.ArrayList;
 
 class IVDatabase { // TODO find better way to store
@@ -74,4 +77,20 @@ class IVDatabase { // TODO find better way to store
     }
 
 
+    public static String getPokemonName(View v) {
+        String[] pokemonNames = v.getResources().getStringArray(R.array.pokemonNames);
+        return pokemonNames[pokemonDex - 1];
+    }
+
+    public static String getCP() {
+        int beginCP = getCP(0, Variables.getBaseIV(pokemonDex));
+        int endCP = getCP(list.size() - 1, Variables.getBaseIV(pokemonDex));
+        if (beginCP == endCP) {
+            return beginCP + "";
+        }
+        else {
+            return getCP(list.size() / 2, Variables.getBaseIV(pokemonDex)) + "?";
+        }
+
+    }
 }

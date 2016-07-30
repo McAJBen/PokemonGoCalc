@@ -1,6 +1,8 @@
 package com.mcajben.pokemongocalculator;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -130,7 +132,7 @@ public class ResultActivity extends AppCompatActivity {
                 maxPerfect = perfect;
             }
 
-            if (i < 500) {
+            if (i < 1000) {
                 if (i == 0) {
                     lvlText.append(String.format(Locale.ENGLISH, "%.1f", (ivs[0] + 1) / 2.0));
                     stText.append(String.format(Locale.ENGLISH, "%d", ivs[1]));
@@ -152,8 +154,10 @@ public class ResultActivity extends AppCompatActivity {
             powerUpButton.setEnabled(false);
         }
         TextView totalIVsText = (TextView)findViewById(R.id.TotalIVsLbl);
-        if (IVDatabase.size() >= 500) {
-            totalIVsText.setText(String.format(Locale.ENGLISH, "First 500 of %d", IVDatabase.size()));
+        if (IVDatabase.size() >= 1000) {
+            totalIVsText.setText(String.format(Locale.ENGLISH, "First 1000 of %d", IVDatabase.size()));
+            Button saveButton = (Button)findViewById(R.id.SaveButton);
+            saveButton.setEnabled(false);
         }
         else {
             totalIVsText.setText(String.format(Locale.ENGLISH, "%d", IVDatabase.size()));
@@ -237,5 +241,15 @@ public class ResultActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResultActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    @SuppressWarnings("unused")
+    public void onSave(View v) {
+
+        Intent intent = new Intent(this, SaveActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
+        onBackPressed();
     }
 }

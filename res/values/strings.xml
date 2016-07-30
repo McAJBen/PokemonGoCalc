@@ -8,7 +8,7 @@
     <string name="stardust_cost">Stardust Cost:</string>
     <string name="current_hp">Current HP:</string>
     <string name="submit">Submit</string>
-    <string name="powered_up">Powered up?</string>
+    <string name="powered_up_q">Powered up?</string>
     <string name="power_up">Power Up</string>
     <string name="check_if_unknown">(check if unknown)</string>
     <string name="possible_iv_values">Possible IV Values:</string>
@@ -18,7 +18,7 @@
     <string name="defence">Defence</string>
     <string name="do_one_of_the_following_to_narrow_down_ivs">Do one of the following to narrow down IVs</string>
     <string name="evolve">Evolve</string>
-    <string name="cant_power_up">Can\'t Power Up!</string>
+    <string name="max_level">Max Level</string>
     <string name="stats_after_evolution">Stats After Evolution</string>
     <string name="cp">CP</string>
     <string name="hp">HP</string>
@@ -27,7 +27,8 @@
     <string name="max">Max</string>
     <string name="stats_after_power_up">Stats After Power Up</string>
     <string name="perfect_values">Perfect Values:</string>
-    <string name="perfect">% Perfect</string>
+    <string name="perc_perfect">% Perfect</string>
+    <string name="save">Save</string>
 
     <string-array name='pokemonNames'>
         <item>Bulbasaur</item>

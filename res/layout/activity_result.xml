@@ -432,7 +432,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/perfect"
+                android:text="@string/perc_perfect"
                 android:gravity="center_horizontal"
                 android:layout_weight="1" />
         </LinearLayout>
@@ -516,9 +516,9 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout"
             android:focusable="false"
-            android:focusableInTouchMode="false">
+            android:focusableInTouchMode="false"
+            android:weightSum="4">
 
             <Button
                 android:layout_width="wrap_content"
@@ -526,12 +526,10 @@
                 android:text="@string/evolve"
                 android:id="@+id/EvolveButton"
                 android:onClick="onEvolve"
-                android:layout_margin="5dp"
-                android:padding="3dp"
-                android:tint="@color/lightBlue"
-                android:layout_weight="1"
                 tools:ignore="ButtonStyle"
-                android:background="@drawable/custom_border_light_gray" />
+                android:background="@drawable/custom_border_light_gray"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -539,26 +537,33 @@
                 android:text="@string/power_up"
                 android:id="@+id/PowerUpButton"
                 android:onClick="onPowerUp"
-                android:layout_margin="5dp"
-                android:padding="3dp"
-                android:tint="@color/lightBlue"
-                android:layout_weight="1"
                 tools:ignore="ButtonStyle"
-                android:background="@drawable/custom_border_light_gray" />
+                android:background="@drawable/custom_border_light_gray"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cant_power_up"
+                android:text="@string/max_level"
                 android:id="@+id/CantPowerUpButton"
                 android:onClick="onCantPowerUp"
-                android:layout_margin="5dp"
-                android:padding="3dp"
-                android:tint="@color/lightBlue"
-                android:layout_weight="1"
                 tools:ignore="ButtonStyle"
-                android:background="@drawable/custom_border_light_gray" />
+                android:background="@drawable/custom_border_light_gray"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1" />
+
+            <Button
+                tools:ignore="ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/SaveButton"
+                android:background="@drawable/custom_border_light_gray"
+                android:layout_weight="1"
+                android:onClick="onSave" />
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
