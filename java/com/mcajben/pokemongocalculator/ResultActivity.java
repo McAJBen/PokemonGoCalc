@@ -161,6 +161,10 @@ public class ResultActivity extends AppCompatActivity {
         }
         else {
             totalIVsText.setText(String.format(Locale.ENGLISH, "%d", IVDatabase.size()));
+            if (IVDatabase.size() == 0) {
+                Button saveButton = (Button)findViewById(R.id.SaveButton);
+                saveButton.setEnabled(false);
+            }
         }
         if (perfectCount > 0) {
             TextView perfectText = (TextView)findViewById(R.id.PerfectLbl);
