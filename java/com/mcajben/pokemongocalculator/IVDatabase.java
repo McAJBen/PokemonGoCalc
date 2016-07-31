@@ -47,6 +47,12 @@ class IVDatabase { // TODO find better way to store
         return Math.max((int) (cpm * (stats[0] + ivs[1])), 10);
     }
 
+    public static int getNextLevelHP(int index, int[] stats) {
+        int[] ivs = list.get(index);
+        double cpm = Variables.getCPM(getLvl(index) + 1);
+        return Math.max((int) (cpm * (stats[0] + ivs[1])), 10);
+    }
+
     public static int getCP(int index, int[] stats) {
         int[] ivs = list.get(index);
         return Variables.toCP(stats, ivs[1], ivs[2], ivs[3], Math.pow(Variables.getCPM(ivs[0]), 2) / 10);

@@ -111,7 +111,7 @@ public class ResultActivity extends AppCompatActivity {
                     PuCPMax = nextLvlCP;
                 }
 
-                int nextLevelHP = IVDatabase.getHP(i, preEvStats);
+                int nextLevelHP = IVDatabase.getNextLevelHP(i, preEvStats);
                 averagePuHP += nextLevelHP;
                 if (PuHPMin > nextLevelHP) {
                     PuHPMin = nextLevelHP;
